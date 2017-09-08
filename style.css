@@ -1,0 +1,33 @@
+*
+{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+html,body
+{
+  width:100%;
+  height:100%;
+}
+textarea#input
+{
+  float:left;
+  width:50%;
+  height:100%:
+  background:#1a1a1c;
+  color:#fff;
+}
+iframe#output
+{
+  float:left;
+  width:50%;
+  height:100%;
+}
+button#run
+{
+  position:absolute;
+  left:40%;
+  top:90%;
+  width:10%;
+  height:10%;
+}
