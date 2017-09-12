@@ -14,13 +14,11 @@ try
     }
     id('save').onclick = () =>
     {
-      const el = document.createElement('a');
-      el.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(id('input').value));
-      el.setAttribute('download',id('fname').value);
-      el.style.display = 'none';
-      document.body.appendChild(el);
-      el.click();
-      document.body.removeChild(el);
+      localStorage.set('__html_editor_file_contents',id('input').value);
+    }
+    id('load').onclick = () =>
+    {
+      id('input').value = localStorage.get('__html_editor_file_contents');
     }
   };
 catch(ex)
