@@ -14,10 +14,18 @@ try
     }
     id('save').onclick = () =>
     {
+      const doc = id('output').contentWindow.document;
+      doc.open();
+      doc.write('it works!');
+      doc.close();
       localStorage.setItem('__html_editor_file_contents',id('input').value);
     }
     id('load').onclick = () =>
     {
+      const doc = id('output').contentWindow.document;
+      doc.open();
+      doc.write('it works!');
+      doc.close();
       id('input').value = localStorage.getItem('__html_editor_file_contents');
     }
   };
