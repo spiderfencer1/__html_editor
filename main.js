@@ -14,11 +14,11 @@ try
     }
     id('save').onclick = () =>
     {
-      localStorage.set('__html_editor_file_contents',id('input').value);
+      localStorage.setItem('__html_editor_file_contents',id('input').value);
     }
     id('load').onclick = () =>
     {
-      id('input').value = localStorage.get('__html_editor_file_contents');
+      id('input').value = localStorage.getItem('__html_editor_file_contents');
     }
   };
 catch(ex)
